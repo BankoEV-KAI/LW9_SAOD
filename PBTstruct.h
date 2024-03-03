@@ -6,7 +6,7 @@ struct Node {
 	Node* right;
 };
 
-extern Node* ExamplePBT;
+extern Node* RootPBT;
 
 Node* AddNodes(Node* pCurrent, int count);
 void deletePBT(Node* pCurrent);

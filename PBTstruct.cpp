@@ -3,7 +3,7 @@
 #include <iostream>
 #include <cstdlib>
 
-Node* ExamplePBT;
+Node* RootPBT;
 
 Node* AddNodes(Node* pCurrent, int count) { 
     Node* pTemp;
@@ -14,7 +14,7 @@ Node* AddNodes(Node* pCurrent, int count) {
         countLeft = count / 2; 
         countRight = count - countLeft - 1; 
         pTemp = new Node; 
-        pTemp->data = rand() % 100; 
+        pTemp->data = rand() % 100 + 1; 
         pTemp->left = AddNodes(pTemp->left, countLeft); 
         pTemp->right = AddNodes(pTemp->right, countRight);
         pCurrent = pTemp;
@@ -83,8 +83,8 @@ bool isEmpty() {
 }
 
 void printNonRecursiveSymmetrical() {
-    initStack(ExamplePBT);
-    Node* pCurrentTree = ExamplePBT; 
+    initStack(RootPBT);
+    Node* pCurrentTree = RootPBT; 
     bool Stop = false;
     int levelPBT = 0;
 

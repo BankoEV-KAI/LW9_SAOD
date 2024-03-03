@@ -38,22 +38,22 @@ int main()
         else {
             std::cout << "Сколько вершин содержится в дереве >> ";
             enteringNumber(1, 100, countNode);
-            ExamplePBT = AddNodes(ExamplePBT, countNode);
+            RootPBT = AddNodes(RootPBT, countNode);
             std::cout << std::endl;
             std::cout << "ИСД в проямом порядке (9 лр) " << std::endl;
-            printForward(ExamplePBT, 0);
+            printForward(RootPBT, 0);
             std::cout << std::endl;
             std::cout << "ИСД в симметричном порядке" << std::endl;
             std::cout << "рекурсивный выыод (9 лр)" << std::endl;
-            printSymmetrical(ExamplePBT, 0);
+            printSymmetrical(RootPBT, 0);
             std::cout << std::endl;
             std::cout << "нерекурсивный вывод (10 лр)" << std::endl;
             printNonRecursiveSymmetrical();
             std::cout << std::endl;
             std::cout << "ИСД в обрано-симметричном порядке (9 лр)" << std::endl;
-            printInverselySymmetrical(ExamplePBT, 0);
+            printInverselySymmetrical(RootPBT, 0);
             std::cout << std::endl;
-            deletePBT(ExamplePBT);
+            deletePBT(RootPBT);
         }
     }
 }
