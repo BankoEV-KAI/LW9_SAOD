@@ -2,6 +2,7 @@
 #include <iostream>
 
 //Построение и обход идеально сбалансированных двоичных деревьев.
+//9 и 11 лр
 
 void enteringNumber(int rangeStart, int rangeStop, int& value) {
     while (true) {
@@ -38,7 +39,7 @@ int main()
         else {
             std::cout << "Сколько вершин содержится в дереве >> ";
             enteringNumber(1, 100, countNode);
-            RootPBT = AddNodes(RootPBT, countNode);
+            RootPBT = createTree(RootPBT, countNode);
             std::cout << std::endl;
             std::cout << "ИСД в проямом порядке (9 лр) " << std::endl;
             printForward(RootPBT, 0);

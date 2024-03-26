@@ -8,7 +8,7 @@ struct Node {
 
 extern Node* RootPBT;
 
-Node* AddNodes(Node* pCurrent, int count);
+Node* createTree(Node* pCurrent, int count);
 void deletePBT(Node* pCurrent);
 void printInverselySymmetrical(Node* pCurrent, int levelPBT);
 void printSymmetrical(Node* pCurrent, int levelPBT);

@@ -5,21 +5,21 @@
 
 Node* RootPBT;
 
-Node* AddNodes(Node* pCurrent, int count) { 
-    Node* pTemp;
+Node* createTree(Node* pCurrent, int count) { 
+    Node* temp;
     int countLeft, countRight;
     if (count == 0)  
         return nullptr; 
     else {
         countLeft = count / 2; 
         countRight = count - countLeft - 1; 
-        pTemp = new Node; 
-        pTemp->data = rand() % 100 + 1; 
-        pTemp->left = AddNodes(pTemp->left, countLeft); 
-        pTemp->right = AddNodes(pTemp->right, countRight);
-        pCurrent = pTemp;
+        temp = new Node; 
+        temp->data = rand() % 100 + 1; 
+        temp->left = createTree(temp->left, countLeft);
+        temp->right = createTree(temp->right, countRight);
+        pCurrent = temp;
         
-        return pTemp; 
+        return temp; 
     }
 }
 
